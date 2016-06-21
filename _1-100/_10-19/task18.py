@@ -24,11 +24,20 @@ def vals():
 def largest_path():
     tmp = vals()
 
-    last = tmp[len(tmp) - 15:len(tmp)]
+    l = 15                  # length of current
+    offs = len(tmp) - l     # offset of current
 
-    print(last)
+    current = tmp[offs:offs + l]
+    last = [0] * (l + 1)
 
-    return 0
+    while len(current):
+        l -= 1
+        offs -= l
+
+        last = [max(x[0], x[1]) + x[2] for x in zip(last[0:l + 1], last[1:l + 2], current)]
+        current = tmp[offs:offs + l]
+
+    return last[0]
 
 
 print(largest_path())
