@@ -38,3 +38,7 @@ def factors(n, primes=prime_generator()):
             break
 
     return result
+
+
+def divisors(n):
+    return [x for x in range(1, n) if n % x == 0]
