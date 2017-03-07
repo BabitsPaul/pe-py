@@ -1,5 +1,5 @@
-from lp import list_prod
-from soe import sieve_of_eratosthenes
+from util.lp import list_prod
+from util.soe import sieve_of_eratosthenes
 
 from util.fact import factors
 

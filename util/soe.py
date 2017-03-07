@@ -45,6 +45,7 @@ def prime_generator():
                 break
 
         if is_prime:
+            primes.append(i)
             yield i
 
         i += 1
