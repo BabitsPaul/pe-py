@@ -1,10 +1,10 @@
 def spiral_diagonal_sum(n):
-    sum = 0
+    sum = 1
 
-    for i in range(0, n // 2):
-        pass
+    for i in range(3, n + 1, 2):
+        sum += 4 * i ** 2 - (i - 1) * 6
 
-    return 0
+    return sum
 
 
-print(spiral_diagonal_sum(5))
+print(spiral_diagonal_sum(1001))
