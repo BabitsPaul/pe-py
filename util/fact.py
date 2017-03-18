@@ -42,3 +42,12 @@ def factors(n, primes=prime_generator()):
 
 def divisors(n):
     return [x for x in range(1, n) if n % x == 0]
+
+
+def gcd(a, b):
+    a, b = max(a, b), min(a, b)
+
+    while b != 0:
+        a, b = b, a % b
+
+    return a
